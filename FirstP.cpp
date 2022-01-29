@@ -8,7 +8,7 @@ int main()
 {
 	string fts("Hello from installation 04");
 	string zero("Hello from installation 00");
-	cout << fts << endl << zero;
+	cout << fts << endl << zero << endl << "String length " << fts.length() << " characters";
 }
 /*void previous() {
 	int x, y;
