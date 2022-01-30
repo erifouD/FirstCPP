@@ -4,18 +4,56 @@
 #include <iostream>
 #include "Helpers.h"
 using namespace std;
+
+void cycle(int N)
+{
+	for (int i = 0; i < N; i++)
+	{
+		switch (i % 2)
+			case 0: {cout << i << endl; }
+
+	}
+}
+
+
 int main()
 {
-	string fts("Hello from installation 04");
-	string zero("Hello from installation 00");
-	cout << fts << endl << zero << endl << "String length " << fts.length() << " characters" << endl;
-	cout << "First character " << fts[0] << ", last character " << fts[fts.length() - 1];
+	const int w = 56;
+	for(int i = 0; i < w; i++) 
+	{
+		if (i % 2 == 1)
+		{
+			cout << i << endl;
+		}
+	}
+	cout << endl;
+	cycle(129);
+
 }
-/*void previous() {
-	int x, y;
-	cout << "First number: ";  cin >> x;
-	cout << "Second number: "; cin >> y;
-	cout << "Sum quad equal: " << degree(x, y);
-}*/
+
+
+/*	
+void previous() 
+	{
+		int x, y;
+		cout << "First number: ";  cin >> x;
+		cout << "Second number: "; cin >> y;
+		cout << "Sum quad equal: " << degree(x, y);
+
+
+		int s = 80, n = 0;
+		while (s + n < 150) {
+			s = s - 5;
+			n = n + 15;
+		}
+		cout << n;
+		return 0;
+
+
+		string fts("Hello from installation 04");
+		string zero("Hello from installation 00");
+		cout << fts << endl << zero << endl << "String length " << fts.length() << " characters" << endl;
+		cout << "First character " << fts[0] << ", last character " << fts[fts.length() - 1]; 
+	} */
 
 
