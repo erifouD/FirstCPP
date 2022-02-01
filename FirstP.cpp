@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include "Helpers.h"
+#include <Windows.h>
+
 using namespace std;
 
 void cycle(int N)
@@ -18,16 +20,25 @@ void cycle(int N)
 
 int main()
 {
-	const int w = 56;
-	for(int i = 0; i < w; i++) 
+	SYSTEMTIME st;
+	GetLocalTime(&st);
+	int day = st.wDay;
+	int sum = 0;
+
+	const int N = 3;
+	int array[N][N] = {};
+	for(int i = 0; i < N; i++)
 	{
-		if (i % 2 == 1)
+		for (int j = 0; j < N; j++)
 		{
-			cout << i << endl;
+			array[i][j] = i + j;
+			cout << array[i][j] << endl;
+
+			if (day % N == i) { sum += array[i][j]; };
 		}
+		cout << endl;
 	}
-	cout << endl;
-	cycle(129);
+	cout << "Sum of indexes: " << sum << endl;
 
 }
 
@@ -54,6 +65,21 @@ void previous()
 		string zero("Hello from installation 00");
 		cout << fts << endl << zero << endl << "String length " << fts.length() << " characters" << endl;
 		cout << "First character " << fts[0] << ", last character " << fts[fts.length() - 1]; 
+
+
+
+
+		while (true) {}
+	const int w = 56;
+	for(int i = 0; i < w; i++)
+	{
+		if (i % 2 == 1)
+		{
+			cout << i << endl;
+		}
+	}
+	cout << endl;
+	cycle(129);
 	} */
 
 
