@@ -4,6 +4,35 @@
 #include <iostream>
 #include "Helpers.h"
 #include <Windows.h>
+#include <cmath>
+
+
+class NewCPPI
+{
+private:
+	double x,y,z;
+public:	
+	NewCPPI(double cx, double cy, double cz)
+	{
+		x = cx;
+		y = cy;
+		z = cz;
+	}
+
+	float coutfl()
+	{
+		return sqrt((x * x) + (y * y) + (z * z));
+	}
+
+		
+
+
+
+};
+
+
+
+
 
 using namespace std;
 
@@ -20,26 +49,8 @@ void cycle(int N)
 
 int main()
 {
-	SYSTEMTIME st;
-	GetLocalTime(&st);
-	int day = st.wDay;
-	int sum = 0;
-
-	const int N = 3;
-	int array[N][N] = {};
-	for(int i = 0; i < N; i++)
-	{
-		for (int j = 0; j < N; j++)
-		{
-			array[i][j] = i + j;
-			cout << array[i][j] << endl;
-
-			if (day % N == i) { sum += array[i][j]; };
-		}
-		cout << endl;
-	}
-	cout << "Sum of indexes: " << sum << endl;
-
+	NewCPPI inan(2,4,6);
+	cout << inan.coutfl() << endl;
 }
 
 
@@ -80,6 +91,30 @@ void previous()
 	}
 	cout << endl;
 	cycle(129);
+
+
+	SYSTEMTIME st;
+	GetLocalTime(&st);
+	int day = st.wDay;
+	int sum = 0;
+
+	const int N = 3;
+	int array[N][N] = {};
+	for(int i = 0; i < N; i++)
+	{
+		for (int j = 0; j < N; j++)
+		{
+			array[i][j] = i + j;
+			cout << array[i][j] << endl;
+
+			if (day % N == i) { sum += array[i][j]; };
+		}
+		cout << endl;
+	}
+	cout << "Sum of indexes: " << sum << endl;
+
+
+
 	} */
 
 
