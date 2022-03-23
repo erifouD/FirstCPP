@@ -7,7 +7,7 @@
 #include <cmath>
 
 
-class NewCPPI
+/*class NewCPPI
 {
 private:
 	double x,y,z;
@@ -44,13 +44,35 @@ void cycle(int N)
 			case 0: {cout << i << endl; }
 
 	}
-}
+}*/
 
+class Stack 
+{
+private:
+	int length = 0;
+public:
+	int* stack = new int[length];
+	void Push(int p) 
+	{
+		stack[length] = p;
+		length++;
+	}
+	void Pop() 
+	{
+		length--;
+		stack = new int[length];
+	}
+
+};
 
 int main()
 {
-	NewCPPI inan(2,4,6);
-	cout << inan.coutfl() << endl;
+	Stack xl;
+	xl.Push(3);
+	xl.Push(14);
+	std::cout << xl.stack[0] << std::endl << xl.stack[1] << std::endl;
+	xl.Pop();
+	std::cout << std::endl << xl.stack[1];
 }
 
 
