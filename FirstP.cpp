@@ -5,6 +5,7 @@
 #include "Helpers.h"
 #include <Windows.h>
 #include <cmath>
+#include <string> 
 
 
 /*class NewCPPI
@@ -44,7 +45,7 @@ void cycle(int N)
 			case 0: {cout << i << endl; }
 
 	}
-}*/
+}
 
 class Stack 
 {
@@ -63,16 +64,61 @@ public:
 		stack = new int[length];
 	}
 
+};*/
+
+using namespace std;
+
+class Animal
+{
+private:
+	string v;
+public:
+	string Voice(string v = "Sound")
+	{
+		return v;
+	}
+};
+
+class Dog : Animal 
+{
+public:
+	string Voice(string v = "Bark")
+	{
+		return v;
+	}
+};
+
+class Cat : Animal 
+{
+public:
+	string Voice(string v = "Meow")
+	{
+		return v;
+	}
+};
+
+class Wolf : Animal {
+public:
+	string Voice(string v = "Awooooo")
+	{
+		return v;
+	}
 };
 
 int main()
 {
-	Stack xl;
-	xl.Push(3);
-	xl.Push(14);
-	std::cout << xl.stack[0] << std::endl << xl.stack[1] << std::endl;
-	xl.Pop();
-	std::cout << std::endl << xl.stack[1];
+	Dog aa;
+	Cat ab;
+	Wolf ac;
+	string ex[] = { aa.Voice(), ab.Voice(), ac.Voice() };
+
+	for (int i = 0; i < 3; i++) {
+		cout << ex[i] << endl;
+	}
+
+
+
+
 }
 
 

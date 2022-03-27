@@ -143,6 +143,7 @@
     <ClCompile Include="Helpers.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="FirstP.h" />
     <ClInclude Include="Helpers.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
